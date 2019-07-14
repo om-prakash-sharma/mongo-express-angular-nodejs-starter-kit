@@ -1,0 +1,60 @@
+<div class="details">
+
+    <div class="details header">
+
+    </div>
+
+    <div class="details filter">
+
+        <input type="text" placeholder="Enter user Email , Mobile " ng-change="getUserList(1 ,filterObj)" ng-model="filterObj.searchQuery"/>
+
+        <div id="pagination">
+
+            <ul uib-pagination total-items="pagination.totalItems" items-per-page="pagination.pageSize" max-size="5"
+                class="pagination-sm" boundary-links="true" force-ellipses="true"
+                ng-model="pagination.currentPage"
+                ng-change="onPageChange(pagination.currentPage -1 )"></ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="">
+        <div class="">
+            <div class="">
+
+                <div class="col-md-12">
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>S.no</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Mobile Number</th>
+                            <th>Created At</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="user in usersInfo ">
+                            <td><span>{{ $index + 1}}</span></td>
+                            <td><span>{{user.firstName + " " + user.lastName}}</span></td>
+                            <td><span>{{user.lastName}}</span></td>
+                            <td><span>{{user.email }}</span></td>
+                            <td><span>{{user.mobile}}</span></td>
+                            <td><span>{{user.createdAt | date:'dd/MM/yyyy' }}</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

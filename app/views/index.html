@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Mean Application</title>
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.png'/>
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+
+    <!-- build:css css/app.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/angularjs-toaster/toaster.min.css?ver=1"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css?ver=1"/>
+    <link rel="stylesheet" href="lib/angular-bootstrap-lightbox.css?ver=1">
+    <!-- /build -->
+
+</head>
+
+<body ng-app="meanApp">
+
+<toaster-container toaster-options="{'time-out': 5000 , 'close-button':true }"></toaster-container>
+<div data-ui-view class="ui-view-main"></div>
+
+<!-- build:js js/bower.min.js  -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js?ver=1"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js?ver=1"></script>
+<script src="bower_components/angular/angular.min.js?ver=1"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js?ver=1"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js?ver=1"></script>
+<script src="bower_components/angularjs-toaster/toaster.min.js?ver=1"></script>
+<!-- /build -->
+
+<!-- build:js js/app.min.js  -->
+<script src="app.js?ver=1"></script>
+<script src="config.js?ver=1"></script>
+<script src="constant.js?ver=1"></script>
+<script src="Services/apiServices.js?ver=1"></script>
+<script src="Controller/homeController.js?ver=1"></script>
+<script src="Controller/usersController.js?ver=1"></script>
+<!-- /build -->
+
+</body>
+</html>

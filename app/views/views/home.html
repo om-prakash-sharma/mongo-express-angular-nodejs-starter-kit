@@ -1,0 +1,51 @@
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form name="userForm" class="registrationForm" role="form">
+                                <div class="form-group">
+                                    <input type="text" placeholder="First Name"
+                                           class="form-control"
+                                           ng-model="userObj.firstName"
+                                           required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name"
+                                           ng-model="userObj.lastName"
+                                           required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Mobile Number"
+                                           ng-model="userObj.mobile"
+                                           maxlength="10"
+                                           ng-pattern='/^[7|8|9]\d{9}$/'
+                                           required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email Id"
+                                           ng-model="userObj.email" required/>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <button type="submit"
+                                                    class="form-control form-control btn btn-register"
+                                                    ng-disabled="userForm.$invalid"
+                                                    ng-click="registerUser(userObj)">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
